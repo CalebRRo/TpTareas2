@@ -8,8 +8,7 @@ const fs = require("fs")
     }
     const escribirJSON = function (tareas) {
         let tareasStringify = JSON.stringify(tareas, null, 3);
-        fs.writeFileSync("./tareas.json", tareasStringify,"utf-8")
-    
+        fs.writeFileSync("./tareas.json", tareasStringify, "utf-8")
     }
     const crearTarea = function(titulo){
         this.titulo = titulo;
