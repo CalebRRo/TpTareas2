@@ -1,23 +1,25 @@
 const process = require("process");
-const {leerArchivo, guardarTarea, crearTarea} = require("./funcionDeTareas");
+const {leerArchivo, guardarTarea, crearTarea, filtrarPorEstado, actualizarEstado, listar} = require("./funcionDeTareas");
 const tareas = leerArchivo()
 
 const accion = process.argv[2]
-const titulo = process.argv[3]
+
 
 switch (accion) {
     case "listar":
-        console.log(".................................");
-        tareas.forEach((tarea, i) => {
-           console.log(`(${i+1})- ${tarea.titulo} -> ${tarea.estado}`); 
-        });
-        console.log(".................................");
-        
+       
+        listar(tareas)
         break;
     case "crear" :  
-        let nuevaTarea = new crearTarea(titulo.trim())
+        let nuevaTarea = new crearTarea(process.argv[3].titulo.trim())
         guardarTarea(nuevaTarea)
         break;
+
+    case "filtrar" :
+        let tareasFiltradas = filtrarPorEstado(process.argv[3]);
+       listar(tareasFiltradas)
+        break;  
+
     case undefined :
         console.log("........................................");
         console.log("Atencion tienes que pasar una accion 🤔");
