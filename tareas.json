@@ -1,7 +1,7 @@
 [
    {
       "titulo": "Repaso js",
-      "estado": "en proceso"
+      "estado": "terminado"
    },
    {
       "titulo": "Tareas",
@@ -13,7 +13,7 @@
    },
    {
       "titulo": "Terminar PG",
-      "estado": "pendiente"
+      "estado": "en proeso"
    },
    {
       "titulo": "Tareas2 ",
@@ -21,6 +21,10 @@
    },
    {
       "titulo": "github",
+      "estado": "pendiente"
+   },
+   {
+      "titulo": "modulo3",
       "estado": "pendiente"
    }
 ]

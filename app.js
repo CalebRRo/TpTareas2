@@ -11,7 +11,7 @@ switch (accion) {
         listar(tareas)
         break;
     case "crear" :  
-        let nuevaTarea = new crearTarea(process.argv[3].titulo.trim())
+        let nuevaTarea = new crearTarea(process.argv[3])
         guardarTarea(nuevaTarea)
         break;
 
@@ -19,6 +19,11 @@ switch (accion) {
         let tareasFiltradas = filtrarPorEstado(process.argv[3]);
        listar(tareasFiltradas)
         break;  
+    
+    case "actualizar" :
+        let tareaActualizada = actualizarEstado(process.argv[3],process.argv[4]) 
+       console.log(tareaActualizada);
+       break
 
     case undefined :
         console.log("........................................");

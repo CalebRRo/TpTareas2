@@ -40,9 +40,12 @@ const fs = require("fs")
                      estado: nuevoEstado
                  }
              }
-             return tarea
+             return tareas
          })
     }
+    
+  console.log(actualizarEstado());
+
  
 
 module.exports = {
