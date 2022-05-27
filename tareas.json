@@ -16,7 +16,7 @@
       "estado": "en proeso"
    },
    {
-      "titulo": "Tareas2 ",
+      "titulo": "Tareas2",
       "estado": "en proceso"
    },
    {
@@ -26,5 +26,6 @@
    {
       "titulo": "modulo3",
       "estado": "pendiente"
-   }
+   },
+   null
 ]

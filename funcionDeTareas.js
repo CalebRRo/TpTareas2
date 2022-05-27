@@ -31,6 +31,11 @@ const fs = require("fs")
         let tareasFiltradas = tareas.filter(tarea => tarea.estado === estado)
         return tareasFiltradas
     }
+    const eliminar = function (titulo) {
+        let tareas = leerArchivo()
+        let tareasSinElementoEliminado = tareas.filter(tarea => tarea.titulo !== titulo)
+        console.log(tareasSinElementoEliminado);
+    }
     const actualizarEstado = function (titulo,nuevoEstado) {
         let tareas = leerArchivo();
          let tareasActualizadas = tareas.map(tarea =>{
@@ -44,7 +49,7 @@ const fs = require("fs")
          })
     }
     
-  console.log(actualizarEstado());
+ 
 
  
 
@@ -55,7 +60,8 @@ module.exports = {
     guardarTarea,
     filtrarPorEstado,
     actualizarEstado,
-    listar
+    listar,
+    eliminar
     
 };
    
