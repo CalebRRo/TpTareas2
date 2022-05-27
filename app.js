@@ -24,13 +24,11 @@ switch (accion) {
         let tareaActualizada = actualizarEstado(process.argv[3],process.argv[4]) 
        console.log(tareaActualizada);
        break
-    case "eliminar":
-      // let tareaEliminada = eliminar(process.argv[3])
-      // guardarTarea(tareaEliminada)
-      console.log(process.argv[3]);
-       //listar(tareaEliminada)
-    
-    break
+       case "eliminar":
+        let tareaEliminada = eliminar(process.argv[3])
+        listar(tareaEliminada)
+  
+      break
 
 
     case undefined :

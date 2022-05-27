@@ -27,5 +27,8 @@
       "titulo": "modulo3",
       "estado": "pendiente"
    },
-   null
+   {
+      "titulo": "clase23",
+      "estado": "pendiente"
+   }
 ]

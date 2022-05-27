@@ -32,10 +32,14 @@ const fs = require("fs")
         return tareasFiltradas
     }
     const eliminar = function (titulo) {
-        let tareas = leerArchivo()
-        let tareasSinElementoEliminado = tareas.filter(tarea => tarea.titulo !== titulo)
-        console.log(tareasSinElementoEliminado);
-    }
+        let tareas = leerArchivo();
+        let tareasSinElementoEliminado = tareas.filter(
+          (tarea) => tarea.titulo !== titulo
+        );
+        escribirJSON(tareasSinElementoEliminado);
+      
+        return tareasSinElementoEliminado;
+      };
     const actualizarEstado = function (titulo,nuevoEstado) {
         let tareas = leerArchivo();
          let tareasActualizadas = tareas.map(tarea =>{
