@@ -1,5 +1,5 @@
 const process = require("process");
-const {leerArchivo, guardarTarea, crearTarea, filtrarPorEstado, actualizarEstado, listar,eliminar} = require("./funcionDeTareas");
+const {leerArchivo, guardarTarea, crearTarea, filtrarPorEstado, listar, eliminar} = require("./funcionDeTareas");
 const tareas = leerArchivo()
 
 const accion = process.argv[2]

@@ -40,18 +40,7 @@ const fs = require("fs")
       
         return tareasSinElementoEliminado;
       };
-    const actualizarEstado = function (titulo,nuevoEstado) {
-        let tareas = leerArchivo();
-         let tareasActualizadas = tareas.map(tarea =>{
-             if (tarea.titulo === titulo) {
-                 return{
-                     titulo,
-                     estado: nuevoEstado
-                 }
-             }
-             return tareas
-         })
-    }
+  
     
  
 
@@ -63,7 +52,6 @@ module.exports = {
     crearTarea,
     guardarTarea,
     filtrarPorEstado,
-    actualizarEstado,
     listar,
     eliminar
     
